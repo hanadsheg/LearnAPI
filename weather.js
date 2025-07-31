@@ -22,5 +22,4 @@ let city;
 
 function getCity() {
   city = cityInput.value;
-
 }
