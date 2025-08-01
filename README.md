@@ -56,8 +56,6 @@ This weather application allows users to search for real-time weather informatio
 - 🎨 Simple and user-friendly interface  
 - 💬 Styled using `Roboto` font and smooth UI transitions  
 
-### 🗂 File Structure
-
 
 ### 🚀 Features
 
@@ -66,6 +64,4 @@ This weather application allows users to search for real-time weather informatio
 - ☁ Shows current weather conditions  
 - 🎨 Simple and user-friendly interface  
 - 💬 Styled using `Roboto` font and smooth UI transitions  
-
-### 🗂 File Structure
 
