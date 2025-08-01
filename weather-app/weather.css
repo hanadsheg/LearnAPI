@@ -54,7 +54,7 @@ body {
 }
 
 #weatherResult {
-  background:  linear-gradient(to bottom, rgba(230, 93, 35, 0.8), rgba(22, 185, 197, 0.5));
+  background:  linear-gradient(to bottom, rgba(178, 29, 158, 0.8), rgba(22, 185, 197, 0.5));
   padding: 10px;
   border-radius: 5px;
   width: 150px;
@@ -69,5 +69,9 @@ p {
   font-size: 16px;
   font-weight: bold;
   color: white;
+}
+
+#weatherResult {
+  transition: display 0.5s ease;
 }
 
