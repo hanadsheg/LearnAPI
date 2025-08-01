@@ -1,6 +1,15 @@
 const apiKey = `f560f687175d0e6ce42ab6928cbcc150`;
 
-async function fetchWeather(city) {
+const cityInput = document.getElementById('cityInput');
+const searchButton = document.getElementById('getWeatherBtn');
+const cityName = document.getElementById('cityName');
+const temperature = document.getElementById('temperature');
+const weatherCondition = document.getElementById('weatherCondition');
+const weatherResult = document.getElementById('weatherResult');
+let city;
+
+
+async function fetchData(city) {
 
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
   if (!response.ok) {
@@ -9,19 +18,24 @@ async function fetchWeather(city) {
   const data = await response.json();
   //console.log(data.main.temp);
   console.log(data);
+  showInfo(data);
+  return data;
 }
 
-fetchWeather('london');
 
 
-const cityInput = document.getElementById('cityInput');
-const searchButton = document.getElementById('getWeatherBtn');
-const cityName = document.getElementById('cityName');
-const temperature = document.getElementById('temperature');
-const weatherCondition = document.getElementById('weatherCondition');
-let city;
+
+
 
 function getCity() {
   city = cityInput.value.toLowerCase().trim();
-  console.log(city);
+  fetchData(city);
 }
+
+function showInfo(data){
+  weatherResult.style.display = 'block';
+  cityName.textContent = data.name;
+  temperature.textContent = `${data.main.temp} °C`;
+  weatherCondition.textContent = data.weather[0].description;
+}
+

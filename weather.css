@@ -40,7 +40,7 @@ body {
   border-radius: 10px;
   color: white;
   box-shadow: 2px 2px black;
-  transition all 0.3s ease;
+  transition : all 0.1s ease;
 }
 
 #getWeatherBtn:hover {
