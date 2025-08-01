@@ -7,10 +7,11 @@ async function fetchWeather(city) {
     throw new Error(`Error fetching weather data: ${response.statusText}`);
   }
   const data = await response.json();
-  console.log(data.main.temp);
+  //console.log(data.main.temp);
+  console.log(data);
 }
 
-fetchWeather('London');
+fetchWeather('london');
 
 
 const cityInput = document.getElementById('cityInput');
@@ -21,5 +22,6 @@ const weatherCondition = document.getElementById('weatherCondition');
 let city;
 
 function getCity() {
-  city = cityInput.value;
+  city = cityInput.value.toLowerCase().trim();
+  console.log(city);
 }
