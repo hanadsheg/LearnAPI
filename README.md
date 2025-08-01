@@ -56,12 +56,4 @@ This weather application allows users to search for real-time weather informatio
 - 🎨 Simple and user-friendly interface  
 - 💬 Styled using `Roboto` font and smooth UI transitions  
 
-
-### 🚀 Features
-
-- 🔍 Search weather by city name  
-- 🌡 Displays temperature in Celsius  
-- ☁ Shows current weather conditions  
-- 🎨 Simple and user-friendly interface  
-- 💬 Styled using `Roboto` font and smooth UI transitions  
-
+ 
