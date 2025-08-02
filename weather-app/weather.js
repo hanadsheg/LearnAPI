@@ -8,6 +8,12 @@ const weatherCondition = document.getElementById('weatherCondition');
 const weatherResult = document.getElementById('weatherResult');
 let city;
 
+document.addEventListener('keydown', event => {
+  if (event.key === 'Enter') {
+    getCity();
+  }
+});
+
 
 async function fetchData(city) {
 
@@ -16,19 +22,15 @@ async function fetchData(city) {
     throw new Error(`Error fetching weather data: ${response.statusText}`);
   }
   const data = await response.json();
-  //console.log(data.main.temp);
-  console.log(data);
   showInfo(data);
-  return data;
+
 }
-
-
-
 
 
 
 function getCity() {
   city = cityInput.value.toLowerCase().trim();
+  cityInput.value = '';
   fetchData(city);
 }
 
